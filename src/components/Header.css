@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  font-family: "DM Mono", monospace;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  background-color: var(--bg);
+  box-shadow: 0 0 20px black;
+}
+
+.header--name {
+  margin-left: 10%;
+  font-size: 5vh;
+  background-image: linear-gradient(to right, var(--orange), var(--red1));
+  background-clip: text;
+  color: transparent;
+  color: white;
+}
+
+.header--login {
+  margin-right: 10%;
+}
+
+@media (max-width: 500px) {
+  .header--name {
+    margin-left: 4%;
+    font-size: 3vh;
+  }
+  .header--login {
+    margin-right: 4%;
+  }
+}

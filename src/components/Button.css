@@ -1,0 +1,32 @@
+.btn {
+  font-family: "DM Mono", monospace;
+  padding: 0 2vh;
+
+  background-image: linear-gradient(
+    to right,
+    var(--red1) 0%,
+    var(--orange) 51%,
+    var(--red1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+
+  border-style: solid;
+  border-image-source: linear-gradient(
+    to right,
+    var(--red1) 0%,
+    var(--orange) 51%,
+    var(--red1) 100%
+  );
+  border-width: 0.25vh;
+  border-image: linear-gradient(to right, var(--red1), var(--orange)) 1;
+
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-position: right center;
+  border-image: linear-gradient(to left, var(--red1), var(--orange)) 1;
+}
+
