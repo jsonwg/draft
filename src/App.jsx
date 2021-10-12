@@ -1,10 +1,16 @@
-import Header from "./components/Header.jsx";
+import { Header, Container, Timer } from "./components";
 
 const App = () => {
   return (
-    <div className="App">
+    <>
       <Header />
-    </div>
+      <section className="wrapper">
+        <Container>
+          <Timer />
+        </Container>
+        <Container className="card" value="Card" />
+      </section>
+    </>
   );
 };
 

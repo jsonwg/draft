@@ -1,6 +1,7 @@
 .btn {
   font-family: "DM Mono", monospace;
   padding: 0 2vh;
+  outline: none;
 
   background-image: linear-gradient(
     to right,
@@ -26,7 +27,11 @@
 }
 
 .btn:hover {
+  transform: scale(1.1);
   background-position: right center;
   border-image: linear-gradient(to left, var(--red1), var(--orange)) 1;
 }
 
+.btn:active {
+  transform: scale(0.5);
+}

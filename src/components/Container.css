@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  box-shadow: 0 0 13px black;
+  border-radius: 30px;
+  outline: 0.25vh solid white;
+  outline-offset: -3vh;
+}
+
