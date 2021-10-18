@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
+
+:root {
+  font-family: "DM Mono", monospace;
+  --bg: #1a1a1c;
+  --bg2: #4e4e50;
+  --red1: #c3083f;
+  --red2: #940741;
+  --red3: #6f2232;
+  --orange: #ef7f00;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--red1) 40%,
+    var(--orange) 100%
+  );
+}
