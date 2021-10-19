@@ -11,6 +11,7 @@
 
 <style>
   button {
+    display: block;
     font-family: "DM Mono", monospace;
     padding: 0 2vh;
     outline: none;
@@ -24,31 +25,12 @@
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent;
+    text-shadow: 0px 0px #00000000;
 
     border-style: solid;
     border-width: 0.25vh;
     border-image: linear-gradient(to right, var(--red1), var(--orange)) 1;
-
-    animation-name: shift;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes shift {
-    from {
-      background-position: to right;
-      border-image: linear-gradient(to right, var(--red1), var(--orange)) 1;
-    }
-
-    66% {
-      background-position: right center;
-      border-image: linear-gradient(to left, var(--red1), var(--orange)) 1;
-    }
-
-    to {
-      background-position: to right;
-      border-image: linear-gradient(to right, var(--red1), var(--orange)) 1;
-    }
   }
 </style>
