@@ -2,7 +2,7 @@
   import Header from '$components/Header.svelte';
   import Container from '$components/Container.svelte';
   import Modal from '$components/Modal.svelte';
-  import { modalOpen } from '$components/stores.js';
+  import Timer from '$components/Timer.svelte';
 </script>
 
 <svelte:head>
@@ -16,7 +16,6 @@
       --bg2: #4e4e50;
       --red1: #c3083f;
       --red2: #940741;
-      --red3: #6f2232;
       --orange: #ef7f00;
     }
 
@@ -33,7 +32,7 @@
   <Header />
   <Modal />
   <section class="wrapper">
-    <Container />
+    <Timer />
     <Container />
   </section>
 </main>
