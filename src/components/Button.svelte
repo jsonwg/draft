@@ -9,8 +9,8 @@
 
 <style>
   button {
-    font-family: 'DM Mono', monospace;
-    padding: 0 2vh;
+    font-family: 'Odin Rounded';
+    padding: 0.25vh 2vh;
 
     color: white;
     background: transparent;

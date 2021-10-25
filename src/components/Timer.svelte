@@ -22,6 +22,12 @@
       worker = new Timer();
       worker.onmessage = (e) => {
         timeLeft = e.data;
+
+        if (!timeLeft) {
+          clicked = !clicked;
+          return worker.terminate();
+        }
+
         worker.postMessage(timeLeft);
       };
 
@@ -39,14 +45,18 @@
 <Container>
   <div bind:clientWidth={w} bind:clientHeight={h}>
     <svg>
-      <linearGradient id="linearColors" x1="0" y1="0" x2="1" y2="1">
+      <linearGradient id="timer" x1="0" y1="0" x2="1" y2="1">
         <stop offset="25%" stop-color="var(--red1)" />
         <stop offset="65%" stop-color="var(--orange)" />
         <stop offset="100%" stop-color="var(--red2)" />
       </linearGradient>
+      <radialGradient id="text">
+        <stop offset="30%" stop-color="var(--red1)" />
+        <stop offset="95%" stop-color="var(--orange)" />
+      </radialGradient>
       <circle r={radius} cx="50%" cy="50%" />
       <path
-        stroke-dasharray={`${(timeLeft / 150) * circumference}, ${circumference}`}
+        stroke-dasharray={`${(circumference * timeLeft) / 150}, ${circumference}`}
         d="
           M {w / 2}, {h / 2}
           m {-radius}, 0
@@ -74,8 +84,10 @@
 
   path {
     fill: none;
-    stroke: url(#linearColors);
+    stroke: url(#timer);
     stroke-width: 10;
+    stroke-linecap: round;
+    transition: 1s linear stroke-dasharray;
   }
 
   circle {
@@ -87,7 +99,7 @@
 
   text {
     text-anchor: middle;
-    fill: url(#linearColors);
+    fill: url(#text);
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
   }
 </style>

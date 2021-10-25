@@ -17,6 +17,7 @@
     align-items: center;
     height: 6vh;
     width: 100%;
+    font-family: 'Odin Rounded';
     background-color: #1a1a1c;
     box-shadow: 0 0 20px black;
   }

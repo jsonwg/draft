@@ -4,8 +4,6 @@
 
   let loggedIn = false;
 
-  const size = 3;
-
   const login = () => {
     $modalOpen = true;
   };
@@ -17,7 +15,7 @@
 </script>
 
 {#if !loggedIn}
-  <Button action={login} {size}>Login</Button>
+  <Button action={login} size={2.5}>Login</Button>
 {:else}
-  <Button action={signOut} {size}>Sign Out</Button>
+  <Button action={signOut} size={2.5}>Sign Out</Button>
 {/if}
