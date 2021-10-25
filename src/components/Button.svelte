@@ -9,7 +9,7 @@
 
 <style>
   button {
-    font-family: 'Odin Rounded';
+    font-family: 'Varela Round', sans-serif;
     padding: 0.25vh 2vh;
 
     color: white;

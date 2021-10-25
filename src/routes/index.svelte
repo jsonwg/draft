@@ -9,7 +9,7 @@
   <title>Pomodoro</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
-    @import url(//db.onlinewebfonts.com/c/baed47e8da187c6a146de4bca7bef8af?family=Odin+Rounded);
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
     :root {
       font-family: 'DM Mono', monospace;
